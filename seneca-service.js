@@ -7,4 +7,8 @@ var messageBack = function( message, done ){
 seneca.add({say:'hello'}, function(message,done){
   messageBack(message,done);
 })
-.listen(10102)
+//.listen(10102)
+
+messageBack({name: 'sakai'},function(err,msg){
+  console.log(msg);
+});
